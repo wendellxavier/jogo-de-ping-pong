@@ -106,9 +106,6 @@ def draw():
         window.blit(ball, (ball_x, ball_y))
         window.blit(score1_img, (500, 50))
         window.blit(score2_img, (710, 50))
-        move_ball()
-        move_player()
-        move_player2()
     else:
         window.blit(win, (300, 330))
 
@@ -128,4 +125,7 @@ while loop:
             if events.key == pygame.K_s:
                 player1_movedown = False
     draw()
+    move_ball()
+    move_player()
+    move_player2()
     pygame.display.update()
